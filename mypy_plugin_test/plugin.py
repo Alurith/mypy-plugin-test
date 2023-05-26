@@ -27,7 +27,7 @@ class CustomPlugin(Plugin):
         int_type = ctx.api.named_generic_type("builtins.int", [])
 
         if ctx.type == int_type:
-            ctx.api.fail("No power for ints in my code!", ctx.context)
+            ctx.api.fail("No power between ints in my code!", ctx.context)
             return ctx.default_return_type
 
         return ctx.api.named_generic_type("builtins.float", [])
